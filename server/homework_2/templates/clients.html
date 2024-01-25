@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Покупки за посделние {{ days_ago }} дней
+{% endblock %}
+
+{% block content %}
+<table>
+    <th>Имя</th>
+    <th>Email</th>
+    <th>Пароль</th>
+    <th>Телефон</th>
+    <th>Адрес</th>
+    <th>Дата</th>
+    {% for item in result %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.password }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.address }}</td>
+        <td>{{ item.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

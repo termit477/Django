@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="header-color">
+        <div class="header center">
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'about' %}">Обо мне</a>
+            <a href="{% url 'client' %}">Клиенты</a>
+            <a href="{% url 'product' %}">Продукты</a>
+            <a href="{% url 'order' %}">Заказы</a>
+        </div>
+    </div>
+    <div class="main center">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>
