@@ -35,6 +35,8 @@ class Command(BaseCommand):
             order = Order(customer=choice(client_list))
             for j in range(0, 10):
                 if choice([0, 1]) == 1:
-                    order.total_order += float(product_list[j].price)
+                    total = order.total_order + float(product_list[j].price * product_list[j].lot)
+                    order = Order(customer=choice(client_list),
+                                  product=product_list[j],
+                                  total_order=total)
                     order.save()
-                    order.product.add(product_list[j])

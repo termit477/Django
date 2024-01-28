@@ -45,11 +45,29 @@ body {
     gap: 30px;
 }
 
-table{
+.main_link_position {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 10px;
+}
+
+.main_link {
+    color: #b39500;
+}
+
+table {
     border-spacing: 7px;
 }
 
-td{
+td {
     text-align: center;
     vertical-align: middle;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }

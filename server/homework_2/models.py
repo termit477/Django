@@ -50,6 +50,12 @@ class Product(models.Model):
                f'price: {self.price}, ' \
                f'description: {self.description}'
 
+
+class ImageProduct(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField()
+
+
 # Поля модели "Заказ":
 # ○ связь с моделью "Клиент", указывает на клиента, сделавшего заказ
 # ○ связь с моделью "Товар", указывает на товары, входящие в заказ
@@ -59,6 +65,6 @@ class Product(models.Model):
 
 class Order(models.Model):
     customer = models.ForeignKey(Client, on_delete=models.CASCADE)
-    product = models.ManyToManyField(Product)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     total_order = models.FloatField(default=0)
     date = models.DateField(auto_now_add=True)

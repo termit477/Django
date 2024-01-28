@@ -5,6 +5,10 @@
 {% endblock %}
 
 {% block content %}
+<div class="main_link_position">
+    <a class="main_link" href="{% url 'product_add' %}">Добавить продукт</a>
+    <a class="main_link" href="{% url 'product_image_add' %}">Добавить фото продукта</a>
+</div>
 <table>
     <th>Наименование</th>
     <th>Цена</th>
