@@ -109,8 +109,6 @@ def product_image_add(request):
             imageProduct = ImageProduct(product=product,
                                         image=image)
             imageProduct.save()
-            fs = FileSystemStorage()
-            fs.save(image.name, image)
             message = 'Картинка сохранена'
     else:
         form = ImageProductForm()

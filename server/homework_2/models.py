@@ -27,8 +27,7 @@ class Client(models.Model):
 
     def __str__(self):
         return f'Client: {self.name}, ' \
-               f'email: {self.email}, ' \
-               f'phone: {self.phone}'
+               f'email: {self.email}'
 
 # Поля модели "Товар":
 # ○ название товара
@@ -47,8 +46,7 @@ class Product(models.Model):
 
     def __str__(self):
         return f'title: {self.name}, ' \
-               f'price: {self.price}, ' \
-               f'description: {self.description}'
+               f'price: {self.price}'
 
 
 class ImageProduct(models.Model):
